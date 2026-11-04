@@ -6,7 +6,7 @@
 - `churn_project.py` - скрипт с кастомными классами `OutlierClipper`, `ChurnPredictorStrategy` и кастомной функцией `create_new_features()`.
 - `churn_predictor_model.pkl` - файл пайплана итоговой модели.
 - `coffee_churn_dataset_for_check.csv` - csv-файл с 20 пользователями для тестирования итога проекта. 
-- `test_notebook.ipynb` - блокнот JupyterNotebook с примерным запуском итога проекта для продакшена.
+- `test_notebook_model.ipynb` - блокнот JupyterNotebook с примерным запуском итога проекта для продакшена.
 
 ## Рекомендации для бизнеса по использованию
 1. Загрузить все библиотеки и обновить версии до необходимых:
@@ -16,6 +16,8 @@
 2. Импортировать все классы и функцию из скрипта:
 ```python
 from churn_project import OutlierClipper, create_new_features, ChurnPredictorStrategy
+import joblib
+import pandas as pd
 ```
 3. Загрузить модель и необходимый датасет из файла (сейчас в примере собственный датасет для тестирования):
 ```python
